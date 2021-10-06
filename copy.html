@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Input Username Github</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/v4-shims.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    body {
+       background: -webkit-linear-gradient(bottom, #0242f3, #68a4b3);
+       background-repeat: repeat;
+    }
+    .bigbox {
+        background: #fbfbfb;
+        border-radius: 10px;
+        box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+        height: 365px;
+        margin: 6rem auto 8.1rem auto;
+        width: 500px;
+    }
+    .label { 
+        width: 50px; 
+    }  
+    .infobox {
+        width: 200px; 
+    }  
+    .error { 
+        color: red; 
+        padding-top: 0px;
+        padding-left: 191px;
+    } 
+    .submit { 
+        margin-left: 191px; 
+        margin-top: 15px;
+    } 
+    .container{
+        widows: 600px;
+        height:100px;
+        padding:20px;
+        position: fixed;
+        top: 250px;
+        left: 650px;
+        margin-top: -120px;
+        margin-left: -220px;
+    }
+    .title {
+      font-family: "Raleway Thin", sans-serif;
+      letter-spacing: 1px;
+      padding-bottom: 15px;
+      padding-top: 40px;
+      text-align: center;
+      font-size: 20px;
+    }
+    .input {
+        text-align: center;
+    }
+    .forgot{
+        margin-left: 191px; 
+        margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body> 
+    <div class = "bigbox"> 
+        <div class = "title">
+            <h2>Form Input Username Github</h2>
+            <div>
+                <i class="fa fa-github" aria-hidden="true" style="font-size: 40px; color: rgb(185, 178, 178);"></i>
+            </div>
+            <strong>Khusus Pemograman Web Kelas D</strong>
+            <br>
+            <h6>Masukkan username githubmu!</h6>
+            <form id="signup" method="post" action="">  
+                </div>  
+                <div class = "input">
+                    <span class="label">Username &nbsp</span>
+                    <input type="text"  class="infobox" name="nrp"> 
+                    <br>  
+                </div>
+                <div>
+                    <span class="error">Wajib diisi ya..!</span> 
+                </div>     
+                    <input class="submit btn btn-outline-primary" type="submit" value="Submit">
+                <div class = "forgot">
+                    <a href="https://github.com/" target="_blank">Lupa username github?</a>
+                </div>    
+            </form>
+        <script>
+            $(document).ready(function() {      
+                $('.error').hide();  //kelas dengan nama error yang akan disebunyikan dahulu   
+                $('.submit').click(function(event){ //tombol buat submit form
+                    var data=$('.infobox').val();  //membaca isi dari submit user dengan nama kelas infobox
+                    var len=data.length; //mencari panjang karakter yang di submit oleh user
+                    if(len<1) //melakukan pengecekan panjang karakter, apabila panjang karakter kurang dari 1 maka,
+                    {
+                        $('.error').show(); //memunculkan pesan error       
+                        event.preventDefault(); //untuk menjaga tombol submit agar tidak mengirimkan data yang error ke server  
+                    }     
+                    else //apabila user memberi karakter pada box  
+                    {       
+                        $('.error').hide(); //jika karakter tidak kosong maka pesan error akan tetap dihide     
+                    }    
+                }); 
+            });
+        </script>   
+    </div>
+</body> 
+</html>
