@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Jquery Get Rinda</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+    body {
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        background-color: rgb(17, 51, 82);
+        background-size: cover;
+        padding: 10%;
+        font-family: Cambria;
+        
+    }
+
+    #main {
+        background-color: white;
+        width: 50%;
+        height: 80%;
+        border-radius: 20px;
+        padding: 20px;
+    }
+    .container {
+        font-family: helvetica;
+    }
+
+
+</style>
+<script>
+    $(document).ready(function () {
+            $("#login").click(function () {
+                alert($("#myInput").val() + "was login to this page");
+            });
+            $("#signup").click(function () {
+                alert("This is signup page");
+            });
+        });
+    </script>
+    </head>
+<body>
+    <div class="container-md" id="main">
+        <h3 style="text-align: center;"><b>Selamat Bergabung!</b></h3><br>
+        <h5><b>Cek kelolosan kamu disini</b></h5>
+        <input id="myInput" type="email" placeholder="Masukkan Email" class="form-control">
+        <br>
+        <div class="container">
+        <button type="button" class="btn btn-primary" id ="login">
+            Login
+          </button>
+          <button type="button" class="btn btn-primary" id ="signup">
+            Sign Up
+          </button>
+    </div>
+        
+ 
+</body>
+
+</html>
